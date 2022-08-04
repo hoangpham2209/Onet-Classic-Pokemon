@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             this.width = width;
             this.height = height;
-            table = new int[height, width];
+            table = new int[height + 2, width + 2];
 
             HashSet<int> bangSet = new HashSet<int>();
             Random random = new Random();

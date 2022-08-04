@@ -59,15 +59,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopBar = new System.Windows.Forms.Panel();
+            this.panelRank = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbScoreRank = new System.Windows.Forms.Label();
+            this.lbRank = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.panelSave.SuspendLayout();
             this.panelTopBar.SuspendLayout();
+            this.panelRank.SuspendLayout();
             this.SuspendLayout();
             // 
             // btPlay
             // 
+            this.btPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btPlay.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btPlay.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -86,6 +93,7 @@
             // 
             // btLeader
             // 
+            this.btLeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btLeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btLeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btLeader.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -104,6 +112,7 @@
             // 
             // btCredit
             // 
+            this.btCredit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btCredit.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btCredit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btCredit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -122,6 +131,7 @@
             // 
             // btExit
             // 
+            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btExit.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btExit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -140,6 +150,7 @@
             // 
             // lbIntro
             // 
+            this.lbIntro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbIntro.BackColor = System.Drawing.Color.Transparent;
             this.lbIntro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbIntro.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,6 +165,7 @@
             // 
             // lbBack
             // 
+            this.lbBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbBack.BackColor = System.Drawing.Color.Transparent;
             this.lbBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbBack.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,6 +181,7 @@
             // 
             // btEasy
             // 
+            this.btEasy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btEasy.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btEasy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btEasy.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -188,6 +201,7 @@
             // 
             // btNormal
             // 
+            this.btNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btNormal.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btNormal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btNormal.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -207,6 +221,7 @@
             // 
             // btHard
             // 
+            this.btHard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btHard.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btHard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btHard.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -226,6 +241,7 @@
             // 
             // btBack
             // 
+            this.btBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btBack.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btBack.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -245,6 +261,8 @@
             // 
             // img2
             // 
+            this.img2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.img2.BackColor = System.Drawing.Color.Transparent;
             this.img2.BackgroundImage = global::Pokemon.Properties.Resources.img1;
             this.img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -257,6 +275,8 @@
             // 
             // img1
             // 
+            this.img1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.img1.BackColor = System.Drawing.Color.Transparent;
             this.img1.BackgroundImage = global::Pokemon.Properties.Resources.img2;
             this.img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -269,6 +289,8 @@
             // 
             // logo
             // 
+            this.logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.BackgroundImage = global::Pokemon.Properties.Resources.Pokémon_logo;
             this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -281,6 +303,8 @@
             // 
             // progressBar1
             // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.Location = new System.Drawing.Point(255, 0);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(675, 25);
@@ -336,6 +360,9 @@
             // 
             // panelSave
             // 
+            this.panelSave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panelSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelSave.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -351,7 +378,7 @@
             this.panelSave.Controls.Add(this.label1);
             this.panelSave.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelSave.ForeColor = System.Drawing.Color.White;
-            this.panelSave.Location = new System.Drawing.Point(296, 164);
+            this.panelSave.Location = new System.Drawing.Point(294, 164);
             this.panelSave.Name = "panelSave";
             this.panelSave.Size = new System.Drawing.Size(392, 267);
             this.panelSave.TabIndex = 36;
@@ -359,6 +386,8 @@
             // 
             // lbSave
             // 
+            this.lbSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbSave.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSave.Location = new System.Drawing.Point(165, 218);
@@ -367,9 +396,11 @@
             this.lbSave.TabIndex = 0;
             this.lbSave.Text = "Save";
             this.lbSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSave.Click += new System.EventHandler(this.lbSave_Click);
             // 
             // lbNextLevel
             // 
+            this.lbNextLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNextLevel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbNextLevel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNextLevel.Location = new System.Drawing.Point(258, 218);
@@ -382,6 +413,7 @@
             // 
             // lbMenu
             // 
+            this.lbMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbMenu.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMenu.Location = new System.Drawing.Point(12, 215);
@@ -394,6 +426,7 @@
             // 
             // lbScore
             // 
+            this.lbScore.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbScore.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbScore.Location = new System.Drawing.Point(275, 79);
             this.lbScore.Name = "lbScore";
@@ -403,6 +436,7 @@
             // 
             // lbBonus
             // 
+            this.lbBonus.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbBonus.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBonus.Location = new System.Drawing.Point(275, 121);
             this.lbBonus.Name = "lbBonus";
@@ -412,6 +446,7 @@
             // 
             // lbTotal
             // 
+            this.lbTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbTotal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTotal.Location = new System.Drawing.Point(275, 163);
             this.lbTotal.Name = "lbTotal";
@@ -421,6 +456,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(59, 163);
             this.label4.Name = "label4";
@@ -431,6 +467,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(59, 121);
             this.label3.Name = "label3";
@@ -441,6 +478,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(59, 79);
             this.label2.Name = "label2";
@@ -451,6 +489,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.ForeColor = System.Drawing.Color.Yellow;
             this.label1.Location = new System.Drawing.Point(57, 25);
             this.label1.Name = "label1";
@@ -461,6 +501,8 @@
             // 
             // panelTopBar
             // 
+            this.panelTopBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTopBar.BackColor = System.Drawing.Color.DodgerBlue;
             this.panelTopBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelTopBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -469,12 +511,75 @@
             this.panelTopBar.Controls.Add(this.progressBar1);
             this.panelTopBar.Controls.Add(this.scoring);
             this.panelTopBar.Controls.Add(this.txtScore);
-            this.panelTopBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopBar.Location = new System.Drawing.Point(0, 0);
             this.panelTopBar.Name = "panelTopBar";
             this.panelTopBar.Size = new System.Drawing.Size(956, 25);
             this.panelTopBar.TabIndex = 37;
             this.panelTopBar.Visible = false;
+            // 
+            // panelRank
+            // 
+            this.panelRank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelRank.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panelRank.Controls.Add(this.label6);
+            this.panelRank.Controls.Add(this.lbScoreRank);
+            this.panelRank.Controls.Add(this.lbRank);
+            this.panelRank.Controls.Add(this.label5);
+            this.panelRank.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
+            this.panelRank.ForeColor = System.Drawing.Color.White;
+            this.panelRank.Location = new System.Drawing.Point(343, 164);
+            this.panelRank.Name = "panelRank";
+            this.panelRank.Size = new System.Drawing.Size(308, 346);
+            this.panelRank.TabIndex = 38;
+            this.panelRank.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label6.Location = new System.Drawing.Point(120, 279);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 33);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Back";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.lbBack_Click);
+            // 
+            // lbScoreRank
+            // 
+            this.lbScoreRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbScoreRank.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbScoreRank.Location = new System.Drawing.Point(212, 72);
+            this.lbScoreRank.Name = "lbScoreRank";
+            this.lbScoreRank.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.lbScoreRank.Size = new System.Drawing.Size(86, 225);
+            this.lbScoreRank.TabIndex = 1;
+            this.lbScoreRank.Text = "userScore";
+            // 
+            // lbRank
+            // 
+            this.lbRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbRank.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRank.Location = new System.Drawing.Point(6, 70);
+            this.lbRank.Name = "lbRank";
+            this.lbRank.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.lbRank.Size = new System.Drawing.Size(194, 225);
+            this.lbRank.TabIndex = 1;
+            this.lbRank.Text = "userName";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Location = new System.Drawing.Point(63, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(199, 33);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Top 5 Players";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BaiTap
             // 
@@ -484,6 +589,7 @@
             this.BackColor = System.Drawing.Color.Orange;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(956, 597);
+            this.Controls.Add(this.panelRank);
             this.Controls.Add(this.panelTopBar);
             this.Controls.Add(this.panelSave);
             this.Controls.Add(this.img2);
@@ -502,17 +608,17 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "BaiTap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pokemon";
-            this.TopMost = true;
+            this.Load += new System.EventHandler(this.BaiTap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panelSave.ResumeLayout(false);
             this.panelTopBar.ResumeLayout(false);
             this.panelTopBar.PerformLayout();
+            this.panelRank.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -548,7 +654,12 @@
         protected System.Windows.Forms.Label lbScore;
         protected System.Windows.Forms.Label lbBonus;
         protected System.Windows.Forms.Label lbTotal;
-        private System.Windows.Forms.Panel panelTopBar;
+        protected System.Windows.Forms.Panel panelTopBar;
+        private System.Windows.Forms.Panel panelRank;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbRank;
+        private System.Windows.Forms.Label label6;
+          private System.Windows.Forms.Label lbScoreRank;
     }
 }
 
