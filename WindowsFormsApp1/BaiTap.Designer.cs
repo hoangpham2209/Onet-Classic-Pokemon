@@ -551,12 +551,13 @@
             this.lbScoreRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbScoreRank.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbScoreRank.Location = new System.Drawing.Point(212, 72);
+            this.lbScoreRank.Location = new System.Drawing.Point(189, 72);
             this.lbScoreRank.Name = "lbScoreRank";
             this.lbScoreRank.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.lbScoreRank.Size = new System.Drawing.Size(86, 225);
+            this.lbScoreRank.Size = new System.Drawing.Size(109, 225);
             this.lbScoreRank.TabIndex = 1;
             this.lbScoreRank.Text = "userScore";
+            this.lbScoreRank.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbRank
             // 
@@ -566,9 +567,10 @@
             this.lbRank.Location = new System.Drawing.Point(6, 70);
             this.lbRank.Name = "lbRank";
             this.lbRank.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.lbRank.Size = new System.Drawing.Size(194, 225);
+            this.lbRank.Size = new System.Drawing.Size(177, 225);
             this.lbRank.TabIndex = 1;
             this.lbRank.Text = "userName";
+            this.lbRank.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label5
             // 
@@ -659,7 +661,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbRank;
         private System.Windows.Forms.Label label6;
-          private System.Windows.Forms.Label lbScoreRank;
+        private System.Windows.Forms.Label lbScoreRank;
     }
 }
 

@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public static Dictionary<string, int> dataUsers = new Dictionary<string, int>();
         public int[,] pokemonTable;
         protected byte countClick = 0;
+
         protected PictureBox[] pb;
         protected PictureBox overlayPb = new PictureBox();
         protected Model model;
@@ -27,7 +28,6 @@ namespace WindowsFormsApp1
         }
 
         // =========================== Game Layout ===============================
-
         public void menu()
         {
             this.BackColor = Color.Orange;
@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
         public void randomBackground()
         {
             Random random = new Random();
-            string namePic = random.Next(1, 13).ToString() + ".jpg";
+            string namePic = random.Next(1, 12).ToString() + ".jpg";
 
             this.BackgroundImage = Image.FromFile((@"bg\" + namePic));
             this.BackgroundImageLayout = ImageLayout.Stretch;
@@ -46,8 +46,8 @@ namespace WindowsFormsApp1
 
         public void makeGame(int width, int height, int pokemons)
         {
-            randomBackground();
-            this.BackColor = Color.DarkGray;
+            //randomBackground();
+            this.BackColor = Color.DarkCyan;
 
             model = new Model(width, height, pokemons);
             pb = new PictureBox[height * width];
@@ -290,7 +290,11 @@ namespace WindowsFormsApp1
                 lbRank.Text = string.Join("\n", listUsersName);
                 lbScoreRank.Text = string.Join("\n", listUsersScore);
             }
-            else lbRank.Text = "No Player";
+            else
+            {
+                lbRank.Text = "No Player";
+                lbScoreRank.Text = "No Score";
+            }
         }
 
         public void btCredit_Click(object sender, EventArgs e)
@@ -333,7 +337,7 @@ namespace WindowsFormsApp1
             return true;
         }
 
-        private Queue<pair> findPath(pair s, pair t)
+        private Queue<pair> findPath(pair start, pair end)
         {
             int[,] temp = new int[height + 2, width + 2];
             for (int i = 0; i < height; ++i)
@@ -348,26 +352,26 @@ namespace WindowsFormsApp1
             //BFS
             int[,] dir = { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
 
-            t.first++; t.second++;
-            s .first++; s.second++;
+            end.first++; end.second++;
+            start.first++; start.second++;
 
             Queue<pair> q = new Queue<pair>();
-            q.Enqueue(t);
-            // Mang 2 chieu chua 2 cap gia tri toa do
+            q.Enqueue(end);
+
             pair[,] trace = new pair[height + 2, width + 2];
             for (int i = 0; i < height + 2; i++)
                 for (int j = 0; j < width + 2; j++)
                     trace[i, j] = new pair(-1, -1); 
 
-            trace[t.first, t.second] = new pair(-2, -2);
-            temp[s.first, s.second] = 0;
-            temp[t.first, t.second] = 0;
+            trace[end.first, end.second] = new pair(-2, -2);
+            temp[start.first, start.second] = 0;
+            temp[end.first, end.second] = 0;
 
             while (q.Count != 0)
             {
                 var u = q.Peek();
                 q.Dequeue();
-                if (u.Equals(s)) break;
+                if (u.Equals(start)) break;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -390,22 +394,54 @@ namespace WindowsFormsApp1
             //trace back
             Queue<pair> path = new Queue<pair>();
 
-            if (trace[s.first, s.second].first != -1)
+            if (trace[start.first, start.second].first != -1)
             {
-                while (s.first != -2)
+                while (start.first != -2)
                 {
-                    path.Enqueue(new pair(s.first - 1, s.second - 1));
-                    s = trace[s.first, s.second];
+                    path.Enqueue(new pair(start.first - 1, start.second - 1));
+                    start = trace[start.first, start.second];
                 }
             }
             
             return path;
         }
 
-        private bool canConnect(int x1, int y1, int x2, int y2)
+        private void drawLineMatching(int x1, int y1, int x2, int y2, Queue<pair> path)
         {
-            var path = findPath(new pair(x1, y1), new pair(x2, y2));
-            return path.Count() >= 2 && path.Count() <= 4;
+            PaintEventArgs e = new PaintEventArgs(this.CreateGraphics(), ClientRectangle);
+
+            Point[] points = new Point[path.Count()];
+
+            int coorX = 0, coorY = 0;
+            switch (width)
+            {
+                case 10:
+                    coorX = 270;
+                    coorY = 200;
+                    break;
+                case 15:
+                    coorX = 170;
+                    coorY = 45;
+                    break;
+                case 20:
+                    coorX = 50;
+                    coorY = 45;
+                    break;
+            }
+
+            int i = 0;
+            Pen red = new Pen(Color.Red, 3);
+
+            foreach (var p in path)
+            {
+                points[i] = new Point(p.second * 43 + coorX + 15, p.first * 53 + coorY + 15);
+                if (i > 0)
+                    e.Graphics.DrawLine(red, points[i - 1], points[i]);
+                i++;
+            }
+
+            delay(75);
+            Refresh();
         }
 
         public void samePokemon(object sender)
@@ -418,9 +454,12 @@ namespace WindowsFormsApp1
 
                 int x1 = pokemon1 / width, y1 = pokemon1 % width;
                 int x2 = pokemon2 / width, y2 = pokemon2 % width;
+                var path = findPath(new pair(x1, y1), new pair(x2, y2));
 
-                if (pokemonTable[x1, y1] == pokemonTable[x2, y2] && canConnect(x1, y1, x2, y2))
+                if (pokemonTable[x1, y1] == pokemonTable[x2, y2] && path.Count() >= 2 && path.Count() <= 4)
                 {
+                    drawLineMatching(x1, y1, x2, y2, path);
+
                     pb[pokemon1].Dispose();
                     pb[pokemon2].Dispose();
                     pokemonTable[x1, y1] = 0;
@@ -487,13 +526,13 @@ namespace WindowsFormsApp1
             switch (width)
             {
                 case 10:
-                    countDown(900);
+                    countDown(600);
                     break;
                 case 15:
-                    countDown(1500);
+                    countDown(1800);
                     break;
                 case 20:
-                    countDown(2400);
+                    countDown(3000);
                     break;
             }
         }
@@ -506,23 +545,23 @@ namespace WindowsFormsApp1
                 case "EASY":
                     width = 10;
                     height = 5;
-                    pokemons = 10;
+                    pokemons = 5;
                     makeGame(width, height, pokemons);
-                    countDown(900);
+                    countDown(600);
                     break;
                 case "NORMAL":
                     width = 15;
                     height = 10;
-                    pokemons = 20;
+                    pokemons = 10;
                     makeGame(width, height, pokemons);
-                    countDown(1500);
+                    countDown(1800);
                     break;
                 case "HARD":
                     width = 20;
                     height = 10;
-                    pokemons = 30;
+                    pokemons = 15;
                     makeGame(width, height, pokemons);
-                    countDown(2400);
+                    countDown(3000);
                     break;
             }
         }

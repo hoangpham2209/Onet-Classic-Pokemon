@@ -61,12 +61,6 @@
     <Compile Include="FormSaving.Designer.cs">
       <DependentUpon>FormSaving.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameLayout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LogicGame.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,12 +100,9 @@
     <None Include="bin\Debug\bg\img1.png" />
     <None Include="bin\Debug\bg\img2.png" />
     <Content Include="Pikachu.ico" />
-    <None Include="Resources\Pokémon_logo.png" />
-    <None Include="Resources\pokemon-go-logo-vector-11573947603kgktkevwgs.png" />
-    <None Include="Resources\2.jpg" />
-    <None Include="Resources\1.jpg" />
-    <None Include="Resources\273289.jpg" />
-    <None Include="Resources\592678.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

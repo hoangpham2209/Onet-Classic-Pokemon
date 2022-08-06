@@ -1,8 +1,1 @@
-thanh:16000
-tha:10000
-thanh1:160
-abc:140
-abc1:140
-thong:30
-thong1:30
-aba:10
+Nhat Thanh:1579
