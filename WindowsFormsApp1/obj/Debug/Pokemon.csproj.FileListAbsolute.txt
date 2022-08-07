@@ -10,3 +10,15 @@ D:\Nhat Thanh\Open University\Nam 2\HK3\LTGD\BT\WindowsFormsApp1\WindowsFormsApp
 D:\Nhat Thanh\Open University\Nam 2\HK3\LTGD\BT\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Pokemon.exe
 D:\Nhat Thanh\Open University\Nam 2\HK3\LTGD\BT\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Pokemon.pdb
 D:\Nhat Thanh\Open University\Nam 2\HK3\LTGD\BT\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormSaving.resources
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\bin\Debug\Pokemon.exe.config
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\bin\Debug\Pokemon.exe
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\bin\Debug\Pokemon.pdb
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\Pokemon.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\Pokemon.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.BaiTap.resources
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormSaving.resources
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\Pokemon.Properties.Resources.resources
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\Pokemon.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\Pokemon.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\Pokemon.exe
+C:\Users\User\Desktop\Onet-Classic-Pokemon\WindowsFormsApp1\obj\Debug\Pokemon.pdb
