@@ -501,9 +501,12 @@ namespace WindowsFormsApp1
 
         public void lbNextLevel_Click(object sender, EventArgs e)
         {
-            if (label1.Text.Equals("LOSER"))
+            if (label1.Text.Equals("LOSER"))  
             {
                 panelSave.Hide();
+                label1.Text = "CONGRATULATIONS";
+                label1.ForeColor = Color.Yellow;
+                lbNextLevel.Text = "Next level";
                 this.BackgroundImage = null;
                 this.BackColor = Color.Orange;
 
