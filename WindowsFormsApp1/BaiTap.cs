@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
 
         public void makeGame(int width, int height, int pokemons)
         {
-            //randomBackground();
+            randomBackground();
             this.BackColor = Color.DarkCyan;
 
             model = new Model(width, height, pokemons);
